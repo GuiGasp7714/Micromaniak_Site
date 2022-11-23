@@ -28,6 +28,11 @@ class Jeu
      */
     private $idEtat;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -53,6 +58,18 @@ class Jeu
     public function setIdEtat(?Etat $idEtat): self
     {
         $this->idEtat = $idEtat;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
