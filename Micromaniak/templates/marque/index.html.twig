@@ -26,7 +26,7 @@
              <div class="col " style="background-color:#ebb113; border-radius: 22px  ">
               <h3 class="text-decoration" style="font-weight: 600;  background-color:#e6a802; border-radius: 22px 22px 0px 0px;  padding: 10px ">
               {{marque.nom}}
-                 <p style="font-size: 22px; color: #000; padding-left:10px"></p>
+                 <p style="font-size: 22px; color: #000; padding-left:10px"><img style="width:250px;" src="assets/"></p>
                </h3>
                
              </div>   
@@ -47,8 +47,8 @@
 
 
 <div class="form-group">
-<label>ELibelle de cette nouvelle marque:</label>
-{{form_widget(form.libelle, { 'attr' : { 'class': 'form-control' } })}}
+<label>Libelle de cette nouvelle marque:</label>
+{{form_widget(form.nom, { 'attr' : { 'class': 'form-control' } })}}
 </div></br>
 
 {{form_end(form)}}  </form>
