@@ -36,8 +36,8 @@ class MarqueController extends AbstractController
             $entityManager->persist($marque2);
             $entityManager->flush();
 
-            $marque3 = new Etat();
-        $repo = $this->getDoctrine()->getRepository(Etat::class);
+            $marque3 = new Marque();
+        $repo = $this->getDoctrine()->getRepository(Marque::class);
         $marque3=$repo->findAll();
            
             return $this->render('marque/index.html.twig', [
