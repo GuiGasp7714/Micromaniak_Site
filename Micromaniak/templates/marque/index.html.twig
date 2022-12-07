@@ -3,18 +3,41 @@
 {% block title %}Hello MarqueController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/duchenec/Documents/Modèles Office personnalisés/Bulma/Micromaniak_Site/Micromaniak/src/Controller/MarqueController.php'|file_link(0) }}">src/Controller/MarqueController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/duchenec/Documents/Modèles Office personnalisés/Bulma/Micromaniak_Site/Micromaniak/templates/marque/index.html.twig'|file_link(0) }}">templates/marque/index.html.twig</a></code></li>
-    </ul>
+<div class="container pb-5 pt-5 glass-bg" style="margin-top:100px">
+  <div class="row align-items-center justify-content-center justify-content-around">
+    <div class="col"  style="margin-left: 3vw">
+      <h1 style="font-size:50px" class="pt-5">
+      <strong>Liste de nos marques et états</strong></h1>
+      <p class="text-primary" style="font-weight:500">Veuillez trouver les états de nos produits ainsi que leurs marques</p>
+      <button type="button" class="btn btn-primary">Voir les marques + états</button>
+    </div>
+    
+  </div>
 </div>
+<br>
+<svg xmlns="http://www.w3.org/2000/svg" style="margin-top:200px" viewBox="0 0 1440 320"><path fill="#FFC21B" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+<div style="background-color:#FFC21B">
+   <div class="container">
+       <h1><center>Liste de nos états et marques</center></h1></br> 
+      <div style="display:grid; grid-template-columns: 50% 50%; grid-gap: 20px" id="avis">
+       {% for marque in marque2 %}
+     
+        
+             <div class="col " style="background-color:#ebb113; border-radius: 22px  ">
+              <h3 class="text-decoration" style="font-weight: 600;  background-color:#e6a802; border-radius: 22px 22px 0px 0px;  padding: 10px ">
+              {{marque.nom}}
+                 <p style="font-size: 22px; color: #000; padding-left:10px"></p>
+               </h3>
+               
+             </div>   
+                  
+
+       {% endfor %}
+     
+      </div> 
+  </div>
+ 
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFC21B" fill-opacity="1" d="M0,0L80,48C160,96,320,192,480,197.3C640,203,800,117,960,101.3C1120,85,1280,139,1360,165.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
 {% endblock %}
+
