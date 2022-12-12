@@ -8,23 +8,15 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/duchenec/Documents/Modèles Office personnalisés/Bulma/Micromaniak_Site/Micromaniak/src/Controller/PlateformeController.php'|file_link(0) }}">src/Controller/PlateformeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/duchenec/Documents/Modèles Office personnalisés/Bulma/Micromaniak_Site/Micromaniak/templates/plateforme/index.html.twig'|file_link(0) }}">templates/plateforme/index.html.twig</a></code></li>
-    </ul>
-</div>
-
-{% for Plateforme in LesPlateformes %}
-    <div class="card mb-3">
-      <h3 class="card-header">{{Plateforme.nom}}</h3>
-      <div class="card-body">
-        <h5 class="card-title">{{Plateforme.idMarque.nom}}</h5>
+<div class="PlateformeWrapper">
+  {% for Plateforme in LesPlateformes %}
+      <div class="card mb-3, plateformeCard">
+        <h3 class="card-header">{{Plateforme.nom}}</h3>
+        <div class="card-body, plateformeMarque">
+          <h5 class="card-title">{{Plateforme.idMarque.nom}}</h5>
+        </div>
+        <img class="plateformeImg" src="/assets/Plateformes/{{Plateforme.image}}">
       </div>
-      <img src="/assets/Plateformes/{{Plateforme.image}}">
-    </div>
-{% endfor %}
+  {% endfor %}
+</div>
 {% endblock %}
