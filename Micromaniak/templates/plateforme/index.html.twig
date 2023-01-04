@@ -18,5 +18,17 @@
         <img class="plateformeImg" src="/assets/Plateformes/{{Plateforme.image}}">
       </div>
   {% endfor %}
+  <div class="card mb-3, plateformeCard">
+    {{ form_start(FormPlateforme) }}
+      <h3 class="card-header">{{ form_row(FormPlateforme.nom) }}</h3>
+      <div class="card-body, plateformeMarque">
+        <h5 class="card-title">{{ form_row(FormPlateforme.idMarque) }}</h5>
+      </div>
+      <div class="card-body, plateformeMarque">
+        <h5 class="card-title">{{ form_row(FormPlateforme.image) }}</h5>
+      </div>
+      <div>{{ form_row(FormPlateforme.valider) }}</div>
+    {{ form_end(FormPlateforme) }}
+  </div>
 </div>
 {% endblock %}
